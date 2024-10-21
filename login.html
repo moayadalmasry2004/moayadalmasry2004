@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+
+    <!-- استيراد خط Google -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            min-height: 100vh;
+            background: #575266;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.9)),url(i.jpg);
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+
+        nav {
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.85);
+            padding: 15px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            position: relative;
+            display: block;
+            padding: 10px 20px;
+            transition: color 0.3s;
+        }
+
+        nav ul li a::before {
+            position: absolute;
+            content: "";
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(120deg, transparent, #ffd700, transparent);
+            transform: translateX(-100%);
+            transition: 0.6s;
+        }
+
+        nav ul li a:hover::before {
+            transform: translateX(100%);
+        }
+
+        nav ul li a:hover {
+            color: #2af018;
+        }
+
+        /* تعديل لكتابة النص في الأعلى واليسار */
+        .title {
+            position: absolute;
+            top: 20px; /* المسافة من الأعلى */
+            left: 20px; /* المسافة من اليسار */
+            color: #ffffff; /* لون النص */
+            font-size: 40px; /* حجم النص */
+            font-weight: 700; /* وزن الخط */
+        }
+
+        .login-form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 60px 40px;
+            background: rgba(0, 0, 0, 0.85);
+            color: white;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            width: 100%;
+            max-width: 400px;
+            margin-top: 80px; /* تحريك النموذج للأسفل */
+        }
+
+        .login-form h1 {
+            margin-bottom: 24px;
+            font-size: 28px;
+        }
+
+        .form-input-material {
+            margin: 12px 0;
+            position: relative;
+            width: 100%;
+        }
+
+        .form-input-material input {
+            width: 100%;
+            padding: 15px;
+            background: none;
+            border: 1px solid white;
+            border-radius: 8px;
+            color: white;
+            font-size: 16px;
+        }
+
+        .form-input-material input:focus {
+            border-color: #60e315;
+            outline: none;
+            box-shadow: 0 0 8px rgba(33, 241, 6, 0.5);
+        }
+
+        .form-input-material label {
+            position: absolute;
+            top: 50%;
+            left: 12px;
+            transform: translateY(-50%);
+            color: #ccc;
+            pointer-events: none;
+            transition: 0.3s;
+        }
+
+        .form-input-material input:focus + label,
+        .form-input-material input:not(:placeholder-shown) + label {
+            top: -10px;
+            color: #34e319;
+            font-size: 12px;
+        }
+
+        .btn {
+            width: 100%;
+            padding: 15px;
+            background: transparent;
+            border: 1px solid #0ced57;
+            color: #5bdc05;
+            border-radius: 8px;
+            cursor: pointer;
+            margin-top: 18px;
+            position: relative;
+            overflow: hidden;
+            transition: background 0.3s;
+        }
+
+        .btn::before {
+            position: absolute;
+            content: "";
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(120deg, transparent, #08c618, transparent);
+            transform: translateX(-100%);
+            transition: 0.6s;
+        }
+
+        .btn:hover::before {
+            transform: translateX(100%);
+        }
+
+        .btn:hover {
+            background: transparent;
+            box-shadow: 0 0 20px 10px rgba(4, 224, 4, 0.5);
+        }
+
+    </style>
+</head>
+<body>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="signup.html">Sign Up</a></li>
+            <li><a href="about.html">About</a></li>
+        </ul>
+    </nav>
+
+    <!-- نص ENG STOR -->
+    <h1 class="title">ENG STOR</h1>
+
+    <form action="your-signup-endpoint.html" method="POST" class="login-form">
+        <h1>Log In</h1>
+
+        <div class="form-input-material">
+            <input type="email" id="email" name="email" placeholder=" " required />
+            <label for="email">Email</label>
+        </div>
+
+        <div class="form-input-material">
+            <input type="password" id="password" name="password" minlength="8" placeholder=" " required />
+            <label for="password">Password</label>
+        </div>
+
+        <input type="submit" class="btn" value="Log In">
+    </form>
+
+    <div class="d-flex justify-content-center text-center mt-4 pt-1"></div>
+</body>
+</html>

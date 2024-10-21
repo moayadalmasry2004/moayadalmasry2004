@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ENG Store - Home</title>
+
+    <style>
+
+        .bebas-neue-regular {
+            font-family: "Bebas Neue", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9)), url('i.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            font-family: "Bebas Neue", sans-serif;
+            color: white;
+            text-align: center;
+        }
+
+        nav {
+            position: sticky;
+            top: 0;
+            background-color: rgba(0, 0, 0, 0.5); 
+            z-index: 999; 
+        }
+
+        nav ul {
+            width: 100%;
+            list-style: none;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+        }
+
+        nav ul li {
+            height: 70px;
+        }
+
+        nav a {
+            height: 100%;
+            padding: 0 30px;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            color: rgb(255, 255, 255);
+            position: relative;
+        }
+
+        nav a:hover {
+            color: #616060;
+        }
+
+        nav li:first-child {
+            margin-right: auto;
+        }
+
+        .ll {
+            margin-top: 20px;
+            font-size: 60px;
+        }
+
+        .pp {
+            font-size: 25px;
+        }
+
+        .ii::after {
+            content: '';
+            height: 3px;
+            width: 68%;
+            background: #48d810;
+            position: absolute;
+            left: 16%;
+            bottom: 15%;
+            opacity: 0;
+            transition: all 0.5s;
+        }
+
+        .ii:hover::after {
+            opacity: 1;
+            transform: translateY(-5px);
+            transition: all 0.5s;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: 50px auto;
+        }
+
+        .photo {
+            width: 350px;
+            height: auto;
+            border-radius: 8px;
+            margin: 10px;
+            background-color: rgba(0, 0, 0, 0.6);
+            padding: 20px;
+            transition: transform 0.5s;
+        }
+
+        .photo img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        .photo h1 {
+            font-size: 24px;
+            color: rgb(255, 255, 255);
+            margin: 15px 0;
+        }
+
+        .photo:hover {
+            transform: scale(1.05);
+        }
+
+        .search-bar {
+            display: flex;
+            align-items: center;
+            padding: 0 30px;
+        }
+
+        .search-bar input[type="text"] {
+            padding: 5px;
+            font-size: 16px;
+            border: 1px solid #fff;
+            background-color: rgba(255, 255, 255, 0.2);
+            color: white;
+            border-radius: 5px;
+            outline: none;
+            margin-right: 10px;
+        }
+
+        .search-bar button {
+            padding: 5px 10px;
+            font-size: 16px;
+            background-color: #48d810;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .search-bar button:hover {
+            background-color: #48d810;
+        }
+
+        .shop-now-heading {
+            font-size: 48px;
+            margin: 40px 0 20px;
+            color: #48d810;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li class="ll"><a href="#">ENG Store</a></li>
+            <li class="pp"><a class="ii" href="index.html">Home</a></li>
+            <li class="pp"><a class="ii" href="Login.html">Login</a></li>
+            <li class="pp"><a class="ii" href="Signup.html">Sign Up</a></li>
+            <li class="pp"><a class="ii" href="About.html">About</a></li>
+            <li class="search-bar">
+                <input type="text" placeholder="Search...">
+                <button type="submit">Search</button>
+            </li>
+        </ul>
+    </nav>
+
+    <h1 class="shop-now-heading">Shop Now</h1>
+
+    <div class="container" id="main-content">
+        <div class="photo">
+            <a href="Chandeliers.html"><img src="pngwing.com (14).png" alt="Chandeliers"></a>
+            <h1>Chandeliers</h1>
+        </div>
+
+        <div class="photo">
+            <a href="Sofas.html"><img src="pngwing.com (1).png" alt="Sofas"></a>
+            <h1>Sofas</h1>
+        </div>
+
+        <div class="photo">
+            <a href="Rugs.html"><img src="pngwing.com (10).png" alt="Rugs"></a>
+            <h1>Rugs</h1>
+        </div>
+    </div>
+</body>
+
+</html>

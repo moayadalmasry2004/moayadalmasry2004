@@ -1,0 +1,208 @@
+.bebas-neue-regular {
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+
+*{
+
+    margin: 0px;
+    padding: 0px;
+
+}
+
+body{
+
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.9)),url(i.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    font-family: "Bebas Neue", sans-serif;
+
+}
+
+nav {
+    position: sticky;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.5); 
+    z-index: 999; 
+}
+
+nav ul{
+
+    width: 100%;
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+}
+
+nav ul li{
+
+    height: 70px;
+
+}
+
+nav a{
+
+    height: 100%;
+    padding: 0 30px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    color: rgb(255, 255, 255);
+    position: relative;
+    
+}
+
+nav a:hover{
+    
+    color: #616060;
+  
+}
+
+nav li:first-child{
+
+    margin-right: auto;
+
+}
+
+.ll{
+
+    margin-top: 20px;
+    font-size: 60px;
+
+}
+
+.pp{
+
+    font-size: 25px;
+
+}
+
+.ii::after{
+
+    content: '';
+    height: 3px;
+    width: 68%;
+    background: #48d810;
+    position: absolute;
+    left: 16%;
+    bottom: 15%;
+    opacity: 0;
+    transition: all 0.5s;
+
+}
+
+.ii:hover::after{
+
+    opacity: 1;
+    transform: translateY(-5px);
+    transition: all 0.5s;
+
+}
+
+.container{
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 50px;
+    margin-right: auto;
+    margin-left: auto;
+
+}
+
+.photo{
+    
+    width: 500px;
+    height: auto;
+    border-radius: 8px;
+    margin: 10px;
+
+}
+
+.photo img{
+    
+    width: 100%;
+    height: 50%;
+
+}
+
+.container h3{
+
+    font-size: 28px;
+    color: rgb(128, 128, 128);
+    margin-bottom: 20px;
+    margin-left: 20px;
+
+}
+
+.container p{
+
+    font-size: 18px;
+    color: rgb(255, 255, 255);
+    margin-bottom: 30px;
+    margin-left: 20px;
+    
+}
+
+.photo:hover{
+
+    transform: scale(1.05);
+    transition: all 0.5s;
+
+}
+
+.specials{
+
+    text-decoration: none;
+    font-size: 100px;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    display: block;
+    margin-top: 300px;
+    text-align: center;
+
+}
+
+.specials:hover{
+
+    color: #616060;
+    transform: scale(1.1);
+    transition: all 0.5s;
+
+}
+
+/* .specials::after{
+
+    content: '';
+    height: 3px;
+    width: 300px;
+    background: rgba(224, 23, 23, 0.452);
+    position: absolute;
+    bottom: 15%;
+    left: 42%;
+    opacity: 0;
+    transition: all 0.5s;
+
+
+}
+
+
+
+.specials:hover::after{
+
+    opacity: 1;
+    transform: translateY(-5px);
+    transition: all 0.5s;
+
+} */
+
+.twoH{
+
+    text-decoration: line-through;
+    
+}
